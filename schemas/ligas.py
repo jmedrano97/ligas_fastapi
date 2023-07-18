@@ -15,3 +15,17 @@ class Ligas(BaseModel):
             }
         }
 
+
+class Competencia(BaseModel):
+    id: Optional[int] = None
+    nombre: str = Field(min_length=1, max_length=15)
+    Ligas_id: int
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "nombre": "Copa",
+                "descripcion": "Eliminación directa",
+                "Ligas_id": "1",
+            }
+        }
