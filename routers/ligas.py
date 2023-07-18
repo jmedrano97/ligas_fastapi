@@ -2,7 +2,8 @@ from fastapi import APIRouter
 from fastapi import Depends, Path, Query
 from fastapi.responses import JSONResponse
 from typing import List
-from config.database import Session
+# from config.database import Session
+from config.conexion_mysql import Session
 from fastapi.encoders import jsonable_encoder
 # from middlewares.jwt_bearer import JWTBearer
 from services.ligas import LigasService

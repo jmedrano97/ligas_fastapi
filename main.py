@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from routers.ligas import ligas_router
-from config.database import engine, Base
+from config.conexion_mysql import engine, Base
+# from config.database import engine, Base
 # from middlewares.error_handler import ErrorHandler
 
 app = FastAPI()
