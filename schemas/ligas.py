@@ -4,8 +4,8 @@ from typing import Optional, List
 
 class Ligas(BaseModel):
     id: Optional[int] = None
-    nombre: str = Field(min_length=5, max_length=15)
-    descripcion: str = Field(min_length=15, max_length=50)
+    nombre: str = Field(min_length=1, max_length=60)
+    descripcion: str = Field(min_length=1, max_length=50)
 
     class Config:
         schema_extra = {
@@ -18,7 +18,7 @@ class Ligas(BaseModel):
 
 class Competencia(BaseModel):
     id: Optional[int] = None
-    nombre: str = Field(min_length=1, max_length=15)
+    nombre: str = Field(min_length=1, max_length=60)
     ligas_id: int
 
     class Config:
